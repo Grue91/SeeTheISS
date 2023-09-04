@@ -1,12 +1,15 @@
 # See the ISS
 
-Yet another project to notify you when the International Space Station (ISS) is visible from your location.
+ A project to notify you when the International Space Station (ISS) is visible from your location.
 
-Run "ISSOverhead.Py" if you just want the console output, or try "ISSOverheadPi.py" to turn on an LED connected to a GPIO pin on your Raspberry Pi when its visible from your location
+Run "SeeTheISS.py" in your terminal with your location if you just want to know when its available, or on a Raspberry PI with a LED connected to the GPIO pins (default = 18) if you want a visible notification. 
+```
+python ISSOverhead.py -lat '38.897957' -lon '-77.036560'
+```
 
-![alt text](https://github.com/kh4n4t/SeeTheISS/blob/master/Output.jpg)
+![alt text](term.png)
 
-Requires Python3 and Requests + Time, Leverages Open-Notifys "ISS-Pass-Times" and "Astros" APIs
+Leverages Open-Notifys "ISS-Pass-Times" and "Astros" APIs
 
-http://open-notify.org/Open-Notify-API/ISS-Pass-Times/  
-http://open-notify.org/Open-Notify-API/People-In-Space/
+http://api.open-notify.org/iss-now.json
+http://api.open-notify.org/astros.json
