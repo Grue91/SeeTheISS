@@ -127,12 +127,12 @@ if __name__ == "__main__":
 
     while True:
         ISS_where.update_location()
-        if ISS_where.iss_distance <= 8000: #args.dist
+        if ISS_where.iss_distance <= args.distance: #args.dist
             clear_line()
             print("{} - Its here! Go outside and look up".format(Convert_timestamp(GetCurrentTime())))
             
             ISS_where.visible = True
-            while ((ISS_where.iss_distance <= 8000) and (ISS_where.visible == True)):
+            while ((ISS_where.iss_distance <= args.distance) and (ISS_where.visible == True)):
                 ISS_where.update_location()
                 time.sleep(30)
             ISS_where.visible = False
